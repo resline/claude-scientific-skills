@@ -1,0 +1,73 @@
+version: 1
+name: claude-scientific-skills
+tagline: Ponad 125 gotowych umiejętności naukowych dla Claude, zamieniających go w asystenta AI do badań.
+description: |-
+  Claude Scientific Skills to obszerne repozytorium ponad 125 gotowych do użycia „skilli" (pluginów wiedzy proceduralnej) dla Claude, stworzone przez zespół K-Dense. Każda umiejętność jest samodzielnym pakietem opartym o plik SKILL.md wraz z przykładami kodu, materiałami referencyjnymi i skryptami pomocniczymi, dzięki czemu Claude może wykonywać złożone, wieloetapowe zadania badawcze z zakresu bioinformatyki, chemii obliczeniowej, medycyny klinicznej, uczenia maszynowego, fizyki, materiałoznawstwa i wielu innych dziedzin naukowych.
+
+  Repozytorium integruje dostęp do ponad 26 baz danych naukowych (m.in. PubMed, ChEMBL, UniProt, ClinicalTrials.gov, COSMIC, KEGG), ponad 54 pakietów Pythona (RDKit, Scanpy, PyTorch Lightning, scikit-learn, BioPython, Qiskit i inne), a także integracji z platformami laboratoryjnymi i naukowymi (Benchling, DNAnexus, LatchBio, OMERO, Protocols.io, Opentrons). Umiejętności są pogrupowane tematycznie (m.in. bioinformatyka, cheminformatyka, proteomika, medycyna kliniczna, obrazowanie medyczne, ML/AI, fizyka i astronomia, inżynieria, wizualizacja danych, automatyzacja laboratoryjna, komunikacja naukowa) i dystrybuowane jako plugin instalowalny w Claude Code, Cursor IDE oraz dowolnym kliencie zgodnym z protokołem MCP (poprzez hostowany lub samodzielnie wdrażany serwer MCP).
+
+  Projekt zawiera również dodatkowy zestaw wewnętrznych „meta-umiejętności” Claude (katalog .claude/skills) wspierających procesy developerskie, takie jak systematyczne debugowanie, pisanie planów, code review, tworzenie nowych skilli czy testowanie aplikacji webowych. Repozytorium jest aktywnie rozwijane, ma zautomatyzowany proces wydawania wersji (GitHub Actions generujące release na podstawie marketplace.json), jest licencjonowane na MIT i przyjmuje kontrybucje społeczności.
+features:
+  - name: Biblioteka 125+ skilli naukowych
+    description: Każda umiejętność zawiera plik SKILL.md z opisem, przykładami kodu, best practices oraz materiałami referencyjnymi dla konkretnej biblioteki, bazy danych lub narzędzia naukowego.
+    status: done
+  - name: Integracja z bazami danych naukowymi
+    description: Bezpośredni dostęp API do ponad 26 baz, takich jak PubMed, ChEMBL, UniProt, ClinVar, COSMIC, ClinicalTrials.gov, KEGG, Reactome i PDB.
+    status: done
+  - name: Wsparcie dla pakietów Python do nauki i ML
+    description: Skille dla ponad 54 pakietów Python obejmujących bioinformatykę, cheminformatykę, uczenie maszynowe i statystykę (RDKit, Scanpy, scikit-learn, PyTorch Lightning, PyMC, SymPy i inne).
+    status: done
+  - name: Instalacja jako plugin Claude Code / marketplace
+    description: Repozytorium jest rejestrowane jako marketplace pluginów Claude Code (marketplace.json) i instalowane jednym poleceniem z automatycznym wykrywaniem odpowiednich skilli.
+    status: done
+  - name: Serwer MCP dla dowolnych klientów
+    description: Dostęp do wszystkich skilli poprzez hostowany serwer MCP (mcp.k-dense.ai) lub samodzielnie wdrażany serwer klienta claude-skills-mcp, kompatybilny z Cursor, ChatGPT, OpenAI Agent SDK i innymi.
+    status: done
+  - name: Integracje z platformami laboratoryjnymi
+    description: Skille integrujące z systemami LIMS i platformami laboratoryjnymi, takimi jak Benchling, DNAnexus, LatchBio, OMERO, Protocols.io i Opentrons, do automatyzacji pracy laboratoryjnej.
+    status: done
+  - name: Narzędzia komunikacji naukowej
+    description: Skille wspierające przegląd literatury, recenzowanie naukowe (peer review), pisanie tekstów naukowych, generowanie raportów PDF, plakatów LaTeX/PPTX oraz obrazów AI.
+    status: done
+  - name: Automatyczny proces wydań (CI/CD)
+    description: Workflow GitHub Actions automatycznie tworzy release'y na podstawie wersji zdefiniowanej w marketplace.json wraz z wygenerowanymi notatkami wydania.
+    status: done
+  - name: Wewnętrzne meta-umiejętności developerskie
+    description: "Dodatkowy zestaw skilli (.claude/skills) wspierających proces tworzenia oprogramowania: systematyczne debugowanie, TDD, code review, pisanie planów, tworzenie nowych skilli, testowanie webaplikacji."
+    status: done
+  - name: Rozszerzanie kolekcji o nowe dziedziny
+    description: Ciągłe dodawanie nowych skilli i integracji naukowych przez zespół K-Dense oraz społeczność w ramach otwartych kontrybucji.
+    status: wip
+stack:
+  languages:
+    - Python
+    - Markdown
+    - JSON
+    - JavaScript
+    - YAML
+  frameworks:
+    - Model Context Protocol (MCP)
+    - Claude Code Plugin/Skills framework
+  infra:
+    - GitHub Actions (CI/CD, automatyczne release)
+    - uv (menedżer pakietów Python)
+    - Hostowany serwer MCP (mcp.k-dense.ai)
+links: {}
+status: active
+tags:
+  - claude
+  - claude-code
+  - ai-agent
+  - skills
+  - mcp
+  - bioinformatyka
+  - cheminformatyka
+  - nauka
+  - badania-naukowe
+  - machine-learning
+  - medycyna-kliniczna
+  - open-source
+ai:
+  generated_at: 2026-07-21T00:14:20.750Z
+  source_commit: ac9e08fab633a6b8d9cc5052f8a54d6d11cebcd7
+locked: []
